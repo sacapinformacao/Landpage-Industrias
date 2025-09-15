@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Risco para Aluguéis de Imóveis | AP Informação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    /* Paleta de cores baseada no gradiente do seu logo */
+    :root {
+        --dark-blue: #194a86;
+        --medium-blue: #2693ab;
+        --light-blue: #e0f2f7;
+        --accent-color: #007bff;
+        --text-color: #333;
+        --highlight-color: #0056b3;
+    }
+    
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--light-blue); /* Fundo geral claro */
+        color: var(--text-color);
+    }
+    
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+    
+    /* Regras do Cabeçalho */
+    header {
+        background-color: var(--light-blue);
+        padding: 40px 20px;
+        color: var(--dark-blue);
+    }
+    
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    
+    .header-logo {
+        max-width: 250px;
+        height: auto;
+        flex-shrink: 0;
+    }
+    
+    .header-text {
+        flex-grow: 1;
+        max-width: calc(100% - 265px);
+    }
+    
+    header h1 {
+        margin: 0;
+        font-size: 2.2em;
+        font-weight: 700;
+        color: var(--dark-blue);
+    }
+    
+    header p {
+        margin: 10px 0 0;
+        font-size: 1.1em;
+        color: var(--dark-blue);
+    }
+
+    /* Seções e Estilos Visuais */
+    .section {
+        padding: 40px;
+        margin-top: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .section-white {
+        background: white;
+    }
+
+    .section-light-bg {
+        background-color: var(--light-blue);
+        box-shadow: none; /* remove a sombra para esta seção */
+    }
+
+    .section h2 {
+        text-align: center;
+        color: var(--dark-blue);
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    
+    .service-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .service-item {
+        background: white; /* Card branco para destacar no fundo claro */
+        padding: 25px;
+        border-radius: 5px;
+        flex: 1 1 250px;
+        text-align: center;
+        border: 1px solid var(--medium-blue);
+    }
+    
+    .service-item h3 {
+        color: var(--dark-blue);
+        margin-top: 0;
+    }
+    
+    .cta-button {
+        display: inline-block;
+        background-color: var(--accent-color);
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.1em;
+        font-weight: 700;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+    }
+    
+    .cta-button:hover {
+        background-color: var(--highlight-color);
+    }
+
+    /* Regras do Logo de Clientes */
+    .logos-clients img {
+        max-width: 120px;
+        height: auto;
+        opacity: 0.6;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .logos-clients {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    /* Seção do Formulário (CTA) */
+    .form-section {
+        background-color: var(--medium-blue);
+        color: white;
+        padding: 40px;
+        text-align: center;
+        margin-top: 20px;
+        border-radius: 8px;
+    }
+    
+    .form-section h2 {
+        color: white;
+    }
+
+    /* Rodapé */
+    footer {
+        background-color: var(--dark-blue);
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9em;
+    }
+    
+    footer a {
+        color: var(--light-blue);
+    }
+    
+    /* Ajustes para Telas Menores (Responsividade) */
+    @media (max-width: 768px) {
+        .header-content {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .header-logo {
+            margin-bottom: 15px;
+            max-width: 150px;
+        }
+    
+        .header-text {
+            max-width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <header>
+    <div class="container header-content">
+        <img src="https://raw.githubusercontent.com/sacapinformacao/clientes/main/Logo%20-%20APinforma%C3%A7%C3%A3o%20-%20fundo%20transparente.png" alt="APinformação Logo" class="header-logo">
+        <div class="header-text">
+            <h1>Inteligência de Dados para a Indústria: Mitigue Riscos e Impulsione seu Negócio</h1>
+            <p>Nossa plataforma oferece uma solução completa de análise de risco, diligência e conformidade, protegendo a sua cadeia de negócios do fornecedor ao cliente final.</p>
+        </div>
+    </div>
+</header>
+    <main>
+        <section class="section section-white">
+            <div class="container">
+                <h2>Proteja sua Cadeia de Suprimentos com Análises Estratégicas</h2>
+                <div class="service-list">
+                    <div class="service-item">
+                        <h3>Redução de Riscos na Contratação</h3>
+                        <p>Minimize perdas com fraudes, irregularidades e problemas de conformidade, garantindo a integridade dos seus fornecedores e parceiros de negócio.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Decisões Ágeis e Confiáveis</h3>
+                        <p>Acesse relatórios e análises de mercado precisas em tempo real, permitindo decisões rápidas e seguras sobre novos negócios e investimentos.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Eficiência Operacional</h3>
+                        <p>Otimize o processo de due diligence, liberando sua equipe para focar em tarefas estratégicas e no crescimento da sua empresa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-light-bg">
+            <div class="container">
+                <h2>Soluções para a Gestão de Riscos na Sua Empresa:</h2>
+                <div class="service-list">
+                    <div class="service-item">
+                        <h3>Análise de Fornecedores</h3>
+                        <p>Verifique a idoneidade, capacidade financeira e histórico de conformidade de seus parceiros e fornecedores, garantindo a solidez da sua cadeia de suprimentos.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Due Diligence de Clientes</h3>
+                        <p>Realize análises detalhadas de seus clientes e distribuidores para mitigar riscos de crédito e reputacionais, assegurando a saúde financeira do seu negócio.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Avaliação de Terceiros e Compliance</h3>
+                        <p>Tenha acesso a um sistema completo de due diligence de terceiros (KYC, KYS) para identificar riscos de fraudes, corrupção e irregularidades, fortalecendo sua governança corporativa.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Verificação de Equipe</h3>
+                        <p>Analise o perfil de seus colaboradores, representantes comerciais e força de vendas para garantir que estejam alinhados às políticas internas da sua empresa e do mercado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section section-white">
+            <div class="container">
+                <h2 style="color: var(--medium-blue);">Nossos Clientes Confiam</h2>
+                <div class="logos-clients">
+                    <img src="https://raw.githubusercontent.com/sacapinformacao/clientes/main/bunge%20logo.png" alt="logo Bunge">
+                    <img src="https://raw.githubusercontent.com/sacapinformacao/clientes/main/gnatus%20logo.png" alt="Logo Gnatus">
+                    <img src="https://raw.githubusercontent.com/sacapinformacao/clientes/main/logo_brazilglass.jpg" alt="Logo Brazilglass">
+                    <img src="https://raw.githubusercontent.com/sacapinformacao/clientes/main/ragabesh%20logo.png" alt="Logo Ragabesh co">
+                    <img src="https://raw.githubusercontent.com/sacapinformacao/clientes/main/vestatech%20logo.png" alt="Logo Vestatech">
+                </div>
+            </div>
+        </section>
+        
+        <section class="section section-white">
+            <div class="container">
+                <h2 style="color: var(--medium-blue);">Garantindo a Conformidade e a Segurança na Cadeia Produtiva</h2>
+                <p style="text-align: center;">Vá além da análise de crédito tradicional. Nossas soluções de inteligência de dados são desenhadas para atender às rigorosas exigências de compliance da indústria, protegendo seu negócio e sua reputação.</p>
+                <div class="service-list">
+                    <div class="service-item">
+                        <h3>Análise KYC, KYS e KVP</h3>
+                        <p>Realizamos a completa verificação de Clientes (KYC), Fornecedores (KYS) e Parceiros (KVP), garantindo que cada elo da sua cadeia de valor esteja livre de riscos e irregularidades.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Prevenção a Fraudes e Lavagem de Dinheiro</h3>
+                        <p>Com nosso sistema, sua empresa fortalece os mecanismos de combate a fraudes e irregularidades, assegurando a transparência e a legalidade em todas as operações comerciais.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Diligência em Fusões e Aquisições</h3>
+                        <p>Oferecemos relatórios detalhados e due diligence completa para operações de fusões e aquisições, identificando passivos ocultos e riscos corporativos antes da consolidação do negócio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="form" class="form-section">
+            <div class="container">
+                <h2>Pronto para elevar a segurança e a eficiência da sua empresa?</h2>
+                <p>Clique no botão abaixo para iniciar uma conversa direta no WhatsApp e descobrir como nossas soluções de inteligência de dados podem transformar a sua gestão de riscos.</p>
+                <a href="https://api.whatsapp.com/send?phone=5511948962888&text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20de%20análise%20de%20risco%20para%20indústrias." class="cta-button">Fale com a APinformação pelo WhatsApp</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 APinformação. Todos os direitos reservados. Visite nosso site: <a href="https://www.apinformacao.net.br" style="color: #ffffff;">www.apinformacao.net.br</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
