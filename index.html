@@ -209,7 +209,7 @@
             max-width: 160px;
         }
 
-        /* ----- INÍCIO CORREÇÕES PARA BOTÕES E ROLAGEM ----- */
+        /* INÍCIO CORREÇÕES CABEÇALHO MOBILE */
         .header-cta {
             display: flex; /* Garante que o container de botões apareça */
             order: 2; /* Posiciona o container de botões entre o logo e o ícone de menu */
@@ -227,7 +227,7 @@
         .header-cta .cta-contact {
             display: none; /* Oculta o botão de contato, mantendo-o dentro do menu */
         }
-        /* ----- FIM CORREÇÕES PARA BOTÕES E ROLAGEM ----- */
+        /* FIM CORREÇÕES CABEÇALHO MOBILE */
 
         /* Oculta navegação padrão em mobile */
         .header-nav {
@@ -302,6 +302,21 @@
         .menu-icon {
             display: flex; 
         }
+
+        /* INÍCIO CORREÇÕES RODAPÉ MOBILE (Institucional e Links Úteis) */
+        .footer-group {
+            flex-direction: column; /* Coloca as colunas Inst e Links Úteis uma abaixo da outra */
+            gap: 0;
+            width: 100%;
+            margin-bottom: 20px; /* Adiciona o espaçamento único para o grupo inteiro */
+        }
+        
+        /* Remove a margem redundante nos filhos e permite que usem a largura total */
+        .footer-group .footer-column {
+            flex: 1 1 100%;
+            margin-bottom: 0; /* Remove a margem interna que causaria duplicação de espaço */
+        }
+        /* FIM CORREÇÕES RODAPÉ MOBILE */
     }
     
     /* Conteúdo da página (sem alterações aqui) */
@@ -342,7 +357,7 @@
         filter: grayscale(0%); 
     }
 
-    /* Estilos do rodapé (sem alterações aqui) */
+    /* Estilos do rodapé */
     footer {
         background-color: var(--dark-blue);
         color: white;
@@ -423,7 +438,7 @@
             border-bottom: none;
         }
     }
-    /* Estilos específicos para garantir que os links não quebrem */
+    /* Estilos específicos para garantir que os links não quebrem (Desktop) */
     .footer-group {
         display: flex;
         flex-wrap: nowrap; 
