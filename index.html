@@ -190,7 +190,7 @@
         color: white;
         cursor: pointer;
         padding: 0 10px;
-        order: 2; 
+        order: 3; /* Posicionado à direita do Login */
         height: 100%;
         display: flex;
         align-items: center;
@@ -201,6 +201,7 @@
             height: 60px;
             padding: 0 12px;
             justify-content: space-between; 
+            gap: 10px; /* Reduz o espaçamento entre elementos */
         }
 
         .header-logo img {
@@ -208,7 +209,27 @@
             max-width: 160px;
         }
 
-        /* Oculta navegação e CTAs padrão em mobile */
+        /* ----- INÍCIO CORREÇÕES PARA BOTÕES E ROLAGEM ----- */
+        .header-cta {
+            display: flex; /* Garante que o container de botões apareça */
+            order: 2; /* Posiciona o container de botões entre o logo e o ícone de menu */
+            margin-left: auto; /* Garante que se afaste do logo */
+            gap: 10px;
+        }
+
+        .header-cta .cta-login {
+            display: flex; /* Exibe o botão de login */
+            padding: 8px 16px; /* Ajusta o padding para mobile */
+            font-size: 0.85em;
+            align-items: center;
+        }
+
+        .header-cta .cta-contact {
+            display: none; /* Oculta o botão de contato, mantendo-o dentro do menu */
+        }
+        /* ----- FIM CORREÇÕES PARA BOTÕES E ROLAGEM ----- */
+
+        /* Oculta navegação padrão em mobile */
         .header-nav {
             display: none;
             position: absolute;
@@ -224,7 +245,6 @@
             /* CORREÇÕES PARA ROLAGEM */
             max-height: calc(100vh - 60px); /* Altura da viewport menos a altura do header */
             overflow-y: auto; /* Adiciona barra de rolagem se o conteúdo exceder a max-height */
-            /* FIM CORREÇÕES PARA ROLAGEM */
         }
 
         .header-nav ul {
@@ -277,10 +297,6 @@
         /* Exibir menu ao clicar no ícone */
         #menu-toggle:checked ~ .menu-icon + .header-nav {
             display: flex;
-        }
-
-        .header-cta {
-            display: none; 
         }
 
         .menu-icon {
@@ -603,7 +619,7 @@
                 <li><a href="https://sacapinformacao.github.io/Compliance/">Compliance e LGPD</a></li>
                 <li><a href="https://sacapinformacao.github.io/Cadastral/">Validação Cadastral</a></li>
                 <li><a href="https://sacapinformacao.github.io/Credito/">Análise de Crédito</a></li>
-                <li><a href="https://sacapinformacao.github.io://checagem-pre-processual/">Checagem Pré-processual</a></li>
+                <li><a href="https://sacapinformacao.github.io/checagem-pre-processual/">Checagem Pré-processual</a></li>
                 <li><a href="https://sacapinformacao.github.io/devedores-e-reus/">Localização de Devedores e Réus</a></li>
             </ul>
         </div>
