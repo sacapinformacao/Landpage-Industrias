@@ -223,8 +223,19 @@
     .cta-button { display:inline-block; background:var(--accent-color); color:#fff; padding:12px 22px; border-radius:8px; text-decoration:none; font-weight:700; }
     .cta-button:hover { background:#0056b3; }
 
+    /* ESTILOS CORRIGIDOS PARA LOGOS DE CLIENTES: Grayscale e Hover */
     .logos-clients { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; align-items:center; margin-top:18px; }
-    .logos-clients img { max-width:120px; height:auto; opacity:0.85; }
+    .logos-clients img { 
+        max-width:120px; 
+        height:auto; 
+        opacity:0.85; 
+        filter: grayscale(100%); /* Fica em preto e branco por padrão */
+        transition: filter 0.3s ease, opacity 0.3s ease; /* Adiciona transição suave */
+    }
+    .logos-clients img:hover {
+        opacity: 1; /* Aumenta um pouco a opacidade no hover */
+        filter: grayscale(0%); /* Remove o filtro, mostrando a cor original */
+    }
 
     /* Estilos do rodapé */
     footer {
