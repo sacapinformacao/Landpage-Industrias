@@ -27,7 +27,7 @@
         font-family: 'Roboto', sans-serif;
         margin: 0;
         color: var(--text-color);
-        background: #f7f7f7;
+        background: #f7f7f7; /* Fundo cinza claro */
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
@@ -304,6 +304,17 @@
         }
 
         /* INÍCIO CORREÇÕES RODAPÉ MOBILE (Institucional e Links Úteis) */
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .footer-column {
+            margin-bottom: 20px;
+        }
+        .footer-column h3 {
+            border-bottom: none;
+        }
         .footer-group {
             flex-direction: column; /* Coloca as colunas Inst e Links Úteis uma abaixo da outra */
             gap: 0;
@@ -330,7 +341,7 @@
     .hero h1 { font-size:2.2rem; margin:0; font-weight:700; }
     .hero p { margin:0; color:var(--muted); font-size:1.05rem; line-height:1.5; max-width:900px; }
 
-    /* Seções (sem alterações aqui) */
+    /* Seções (fundo branco no desktop e mobile) */
     .section { padding:48px 20px; margin-top:18px; background:#fff; border-radius:10px; box-shadow:0 4px 10px rgba(24,38,63,0.06); }
     .section h2 { color:var(--dark-blue); text-align:center; margin:0 0 14px; font-size:1.8rem; }
     .service-list { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:16px; }
@@ -424,19 +435,6 @@
         padding-top: 20px;
         font-size: 0.8em;
         opacity: 0.7;
-    }
-    @media (max-width: 768px) {
-        .footer-content {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .footer-column {
-            margin-bottom: 20px;
-        }
-        .footer-column h3 {
-            border-bottom: none;
-        }
     }
     /* Estilos específicos para garantir que os links não quebrem (Desktop) */
     .footer-group {
