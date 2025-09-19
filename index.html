@@ -16,7 +16,7 @@
         --text-color: #333;
         --highlight-color: #0056b3;
         --orange-border: #FF8C00;
-        --muted: #666; /* Adicionado para uso no hero */
+        --muted: #666; 
     }
 
     * {
@@ -179,18 +179,18 @@
         color: white;
     }
     
-    /* Novo CSS para Mobile Menu - Início */
+    /* CSS para Mobile Menu */
     #menu-toggle {
-        display: none; /* Esconde o checkbox */
+        display: none; 
     }
 
     .menu-icon {
-        display: none; /* Escondido no desktop */
+        display: none; 
         font-size: 2em;
         color: white;
         cursor: pointer;
         padding: 0 10px;
-        order: 2; /* Garante que fique à direita do logo */
+        order: 2; 
         height: 100%;
         display: flex;
         align-items: center;
@@ -200,7 +200,7 @@
         header {
             height: 60px;
             padding: 0 12px;
-            justify-content: space-between; /* Espaçamento entre logo e ícone */
+            justify-content: space-between; 
         }
 
         .header-logo img {
@@ -221,6 +221,10 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             flex-direction: column;
             width: 100%;
+            /* CORREÇÕES PARA ROLAGEM */
+            max-height: calc(100vh - 60px); /* Altura da viewport menos a altura do header */
+            overflow-y: auto; /* Adiciona barra de rolagem se o conteúdo exceder a max-height */
+            /* FIM CORREÇÕES PARA ROLAGEM */
         }
 
         .header-nav ul {
@@ -251,7 +255,7 @@
         /* Ajuste do dropdown para mobile */
         .header-nav li .dropdown-menu {
             position: static;
-            background-color: rgba(0, 0, 0, 0.1); /* Cor mais sutil para submenu */
+            background-color: rgba(0, 0, 0, 0.1); 
             box-shadow: none;
             visibility: visible;
             opacity: 1;
@@ -262,7 +266,7 @@
         }
         
         .dropdown-menu a {
-            padding: 8px 20px 8px 40px; /* Indentação para sub-itens */
+            padding: 8px 20px 8px 40px; 
             color: #eee;
         }
         
@@ -276,16 +280,15 @@
         }
 
         .header-cta {
-            display: none; /* Esconde os botões de login/contato */
+            display: none; 
         }
 
         .menu-icon {
-            display: flex; /* Exibe o ícone de menu */
+            display: flex; 
         }
     }
-    /* Novo CSS para Mobile Menu - Fim */
     
-    /* Conteúdo da página */
+    /* Conteúdo da página (sem alterações aqui) */
     .hero {
         background: linear-gradient(180deg, rgba(38,147,171,0.03), rgba(224,242,247,0.12));
         padding: 40px 20px;
@@ -296,7 +299,7 @@
     .hero h1 { font-size:2.2rem; margin:0; font-weight:700; }
     .hero p { margin:0; color:var(--muted); font-size:1.05rem; line-height:1.5; max-width:900px; }
 
-    /* Seções */
+    /* Seções (sem alterações aqui) */
     .section { padding:48px 20px; margin-top:18px; background:#fff; border-radius:10px; box-shadow:0 4px 10px rgba(24,38,63,0.06); }
     .section h2 { color:var(--dark-blue); text-align:center; margin:0 0 14px; font-size:1.8rem; }
     .service-list { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:16px; }
@@ -309,21 +312,21 @@
     .cta-button { display:inline-block; background:var(--accent-color); color:#fff; padding:12px 22px; border-radius:8px; text-decoration:none; font-weight:700; }
     .cta-button:hover { background:#0056b3; }
 
-    /* ESTILOS CORRIGIDOS PARA LOGOS DE CLIENTES: Grayscale e Hover */
+    /* Estilos de Logo (sem alterações aqui) */
     .logos-clients { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; align-items:center; margin-top:18px; }
     .logos-clients img { 
         max-width:120px; 
         height:auto; 
         opacity:0.85; 
-        filter: grayscale(100%); /* Fica em preto e branco por padrão */
-        transition: filter 0.3s ease, opacity 0.3s ease; /* Adiciona transição suave */
+        filter: grayscale(100%); 
+        transition: filter 0.3s ease, opacity 0.3s ease; 
     }
     .logos-clients img:hover {
-        opacity: 1; /* Aumenta um pouco a opacidade no hover */
-        filter: grayscale(0%); /* Remove o filtro, mostrando a cor original */
+        opacity: 1; 
+        filter: grayscale(0%); 
     }
 
-    /* Estilos do rodapé */
+    /* Estilos do rodapé (sem alterações aqui) */
     footer {
         background-color: var(--dark-blue);
         color: white;
@@ -600,7 +603,7 @@
                 <li><a href="https://sacapinformacao.github.io/Compliance/">Compliance e LGPD</a></li>
                 <li><a href="https://sacapinformacao.github.io/Cadastral/">Validação Cadastral</a></li>
                 <li><a href="https://sacapinformacao.github.io/Credito/">Análise de Crédito</a></li>
-                <li><a href="https://sacapinformacao.github.io/checagem-pre-processual/">Checagem Pré-processual</a></li>
+                <li><a href="https://sacapinformacao.github.io://checagem-pre-processual/">Checagem Pré-processual</a></li>
                 <li><a href="https://sacapinformacao.github.io/devedores-e-reus/">Localização de Devedores e Réus</a></li>
             </ul>
         </div>
