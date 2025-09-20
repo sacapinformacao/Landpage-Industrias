@@ -38,7 +38,7 @@
         padding: 0 20px
     }
 
-    /* Estilos do cabeçalho */
+    /* Estilos do cabeçalho (Mantidos) */
     header {
         background: linear-gradient(90deg, var(--dark-blue), var(--medium-blue));
         padding: 0 20px;
@@ -179,7 +179,7 @@
         color: white;
     }
     
-    /* CSS para Mobile Menu */
+    /* CSS para Mobile Menu (Mantido) */
     #menu-toggle {
         display: none; 
     }
@@ -190,7 +190,7 @@
         color: white;
         cursor: pointer;
         padding: 0 10px;
-        order: 3; /* Posicionado à direita do Login */
+        order: 3;
         height: 100%;
         display: flex;
         align-items: center;
@@ -201,7 +201,7 @@
             height: 60px;
             padding: 0 12px;
             justify-content: space-between; 
-            gap: 10px; /* Reduz o espaçamento entre elementos */
+            gap: 10px;
         }
 
         .header-logo img {
@@ -209,31 +209,28 @@
             max-width: 160px;
         }
 
-        /* INÍCIO CORREÇÕES CABEÇALHO MOBILE */
         .header-cta {
-            display: flex; /* Garante que o container de botões apareça */
-            order: 2; /* Posiciona o container de botões entre o logo e o ícone de menu */
-            margin-left: auto; /* Garante que se afaste do logo */
+            display: flex;
+            order: 2;
+            margin-left: auto;
             gap: 10px;
         }
 
         .header-cta .cta-login {
-            display: flex; /* Exibe o botão de login */
-            padding: 8px 16px; /* Ajusta o padding para mobile */
+            display: flex;
+            padding: 8px 16px;
             font-size: 0.85em;
             align-items: center;
         }
 
         .header-cta .cta-contact {
-            display: none; /* Oculta o botão de contato, mantendo-o dentro do menu */
+            display: none;
         }
-        /* FIM CORREÇÕES CABEÇALHO MOBILE */
 
-        /* Oculta navegação padrão em mobile */
         .header-nav {
             display: none;
             position: absolute;
-            top: 60px; /* Altura do cabeçalho */
+            top: 60px;
             left: 0;
             right: 0;
             background-color: var(--dark-blue);
@@ -242,9 +239,8 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             flex-direction: column;
             width: 100%;
-            /* CORREÇÕES PARA ROLAGEM */
-            max-height: calc(100vh - 60px); /* Altura da viewport menos a altura do header */
-            overflow-y: auto; /* Adiciona barra de rolagem se o conteúdo exceder a max-height */
+            max-height: calc(100vh - 60px);
+            overflow-y: auto;
         }
 
         .header-nav ul {
@@ -272,7 +268,6 @@
             width: 100%;
         }
 
-        /* Ajuste do dropdown para mobile */
         .header-nav li .dropdown-menu {
             position: static;
             background-color: rgba(0, 0, 0, 0.1); 
@@ -289,12 +284,7 @@
             padding: 8px 20px 8px 40px; 
             color: #eee;
         }
-        
-        .header-nav li:hover .dropdown-menu {
-            /* Mantém visível em mobile (sem hover) */
-        }
 
-        /* Exibir menu ao clicar no ícone */
         #menu-toggle:checked ~ .menu-icon + .header-nav {
             display: flex;
         }
@@ -303,7 +293,6 @@
             display: flex; 
         }
 
-        /* INÍCIO CORREÇÕES RODAPÉ MOBILE (Institucional e Links Úteis) */
         .footer-content {
             flex-direction: column;
             align-items: center;
@@ -316,46 +305,163 @@
             border-bottom: none;
         }
         .footer-group {
-            flex-direction: column; /* Coloca as colunas Inst e Links Úteis uma abaixo da outra */
+            flex-direction: column;
             gap: 0;
             width: 100%;
-            margin-bottom: 20px; /* Adiciona o espaçamento único para o grupo inteiro */
+            margin-bottom: 20px;
         }
         
-        /* Remove a margem redundante nos filhos e permite que usem a largura total */
         .footer-group .footer-column {
             flex: 1 1 100%;
-            margin-bottom: 0; /* Remove a margem interna que causaria duplicação de espaço */
+            margin-bottom: 0;
         }
-        /* FIM CORREÇÕES RODAPÉ MOBILE */
+        
+        /* Ajuste do novo Hero para mobile */
+        .hero .container {
+            flex-direction: column;
+        }
+        .hero-left {
+            padding-right: 0;
+            order: 2; /* Coloca o conteúdo abaixo do formulário no mobile */
+        }
+        .hero-right {
+            width: 100%;
+            order: 1; /* Coloca o formulário no topo no mobile */
+            max-width: none;
+        }
     }
     
-    /* Conteúdo da página (sem alterações aqui) */
+    /* Novo Estilo da Seção HERO */
     .hero {
-        background: linear-gradient(180deg, rgba(38,147,171,0.03), rgba(224,242,247,0.12));
+        background: #fff;
         padding: 40px 20px;
-        text-align: center;
+        text-align: left; 
+    }
+    .hero .container {
+        display: flex; 
+        flex-direction: row; 
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 40px;
+        padding: 0; 
+    }
+
+    .hero-left {
+        flex: 2 1 60%; /* Conteúdo principal mais largo */
+        padding-right: 20px;
+    }
+
+    .hero-left h1 { 
+        font-size:2.2rem; 
+        margin:0 0 10px; 
+        font-weight:700; 
         color: var(--dark-blue);
     }
-    .hero .container { display:flex; flex-direction:column; align-items:center; gap:10px; max-width:980px; }
-    .hero h1 { font-size:2.2rem; margin:0; font-weight:700; }
-    .hero p { margin:0; color:var(--muted); font-size:1.05rem; line-height:1.5; max-width:900px; }
+    .hero-left p { 
+        margin:0 0 15px; 
+        color:var(--text-color); 
+        font-size:1.05rem; 
+        line-height:1.5; 
+    }
+    
+    /* Estilos do Formulário (Lado Direito) */
+    .hero-right {
+        flex: 1 1 40%;
+        background: #fff; /* Fundo branco solicitado */
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        max-width: 400px;
+    }
 
-    /* Seções (fundo branco no desktop e mobile) */
-    .section { padding:48px 20px; margin-top:18px; background:#fff; border-radius:10px; box-shadow:0 4px 10px rgba(24,38,63,0.06); }
+    .hero-right h2 {
+        color: var(--dark-blue);
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-size: 1.5rem;
+    }
+
+    /* Estilos dos campos do formulário */
+    .demo-form input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    /* Estilos do Botão do Formulário */
+    .demo-form button {
+        width: 100%;
+        background-color: var(--dark-blue); /* Cor do botão igual ao título */
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .demo-form button:hover {
+        background-color: var(--medium-blue); /* Hover mais suave */
+    }
+
+    /* Estilos de Seções de Conteúdo (Mantidos e ajustados) */
+    .section { 
+        padding:48px 20px; 
+        margin-top:18px; 
+        background:#fff; 
+        border-radius:10px; 
+        box-shadow:0 4px 10px rgba(24,38,63,0.06); 
+    }
     .section h2 { color:var(--dark-blue); text-align:center; margin:0 0 14px; font-size:1.8rem; }
     .service-list { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:16px; }
     .service-item {
         background:#fff; border-radius:8px; padding:22px; border:1px solid rgba(38,147,171,0.08);
         min-width:220px; flex:1 1 260px; box-shadow:0 6px 18px rgba(15,35,60,0.03);
     }
-    .service-item h3 { margin-top:0; color:var(--medium-blue); }
-    .form-section { background: var(--medium-blue); color:#fff; padding:40px 20px; border-radius:10px; text-align:center; }
-    .cta-button { display:inline-block; background:var(--accent-color); color:#fff; padding:12px 22px; border-radius:8px; text-decoration:none; font-weight:700; }
-    .cta-button:hover { background:#0056b3; }
+    .service-item h3 { 
+        margin-top:0; 
+        color: var(--text-color);
+        font-weight: 700;
+    }
+    
+    .form-section { 
+        background: var(--medium-blue); 
+        color:#fff; 
+        padding:40px 20px; 
+        border-radius:10px; 
+        text-align:center; 
+    }
+    
+    .cta-button { 
+        display:inline-block; 
+        background: #fff;
+        color: var(--medium-blue);
+        padding:12px 22px; 
+        border-radius:8px; 
+        text-decoration:none; 
+        font-weight:700; 
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .cta-button:hover { 
+        background: var(--light-blue);
+        color: var(--medium-blue);
+    }
 
-    /* Estilos de Logo (sem alterações aqui) */
-    .logos-clients { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; align-items:center; margin-top:18px; }
+    /* Estilos de Logo (Seção Mantida) */
+    .logos-clients { 
+        display:flex; 
+        flex-wrap:wrap; 
+        gap:20px; 
+        justify-content:center; 
+        align-items:center; 
+        margin-top:18px; 
+    }
     .logos-clients img { 
         max-width:120px; 
         height:auto; 
@@ -368,7 +474,7 @@
         filter: grayscale(0%); 
     }
 
-    /* Estilos do rodapé */
+    /* ... Rodapé (Mantido) ... */
     footer {
         background-color: var(--dark-blue);
         color: white;
@@ -436,7 +542,6 @@
         font-size: 0.8em;
         opacity: 0.7;
     }
-    /* Estilos específicos para garantir que os links não quebrem (Desktop) */
     .footer-group {
         display: flex;
         flex-wrap: nowrap; 
@@ -471,14 +576,14 @@
             <li>
                 <span>Serviços</span>
                 <ul class="dropdown-menu">
-                    <li><a href="https://sacapinformacao.github.io/BackGroundCheck/">Background Check</a></li>
-                    <li><a href="https://sacapinformacao.github.io/Veiculos/">Análise de Veículos</a></li>
-                    <li><a href="https://sacapinformacao.github.io/Enriquecimento/">Enriquecimento de Dados</a></li>
-                    <li><a href="https://sacapinformacao.github.io/Compliance/">Compliance e LGPD</a></li>
                     <li><a href="https://sacapinformacao.github.io/Cadastral/">Validação Cadastral</a></li>
+                    <li><a href="https://sacapinformacao.github.io/Enriquecimento/">Enriquecimento de Dados</a></li>
                     <li><a href="https://sacapinformacao.github.io/Credito/">Análise de Crédito</a></li>
+                    <li><a href="https://sacapinformacao.github.io/BackGroundCheck/">Background Check</a></li>
                     <li><a href="https://sacapinformacao.github.io/checagem-pre-processual/">Checagem Pré-processual</a></li>
                     <li><a href="https://sacapinformacao.github.io/devedores-e-reus/">Localização de Devedores e Réus</a></li>
+                    <li><a href="https://sacapinformacao.github.io/Veiculos/">Análise de Veículos</a></li>
+                    <li><a href="https://sacapinformacao.github.io/Compliance/">Compliance e LGPD</a></li>
                 </ul>
             </li>
             <li>
@@ -509,15 +614,33 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Inteligência de Dados para a Indústria: Mitigue Riscos e Impulsione seu Negócio</h1>
-      <p>Nossa plataforma oferece uma solução completa de análise de risco, diligência e conformidade, protegendo a sua cadeia de negócios do fornecedor ao cliente final.</p>
-    </div>
-  </section>
-
   <main>
-    <section class="section section-white">
+    <section class="hero">
+        <div class="container">
+            <div class="hero-left">
+                <h1>Inteligência de Dados para a Indústria: Mitigue Riscos e Impulsione seu Negócio</h1>
+                <p>Mais de <strong>150 indústrias confiam em nossos serviços</strong>. Nossa plataforma oferece uma solução completa de análise de risco, diligência e conformidade, protegendo a sua cadeia de negócios do fornecedor ao cliente final.</p>
+                <p>Nossa plataforma é a ferramenta de inteligência de dados que empresas de todos os portes e setores industriais utilizam para proteger seus ativos e garantir a segurança de cada transação.</p>
+            </div>
+
+            <div class="hero-right">
+                <h2>Quero uma demonstração!</h2>
+                <form id="demoForm" class="demo-form" onsubmit="sendDemoRequest(event)">
+                    <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
+
+                    <input type="email" id="email" name="email" placeholder="Email Corporativo" required>
+
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="Número de WhatsApp" required pattern="[0-9]+">
+                    
+                    <input type="text" id="cnpj" name="cnpj" placeholder="Número do CNPJ" required>
+
+                    <button type="submit">Solicitar minha demonstração</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
         <div class="container">
             <h2>Proteja sua Cadeia de Suprimentos com Análises Estratégicas</h2>
             <div class="service-list">
@@ -537,7 +660,7 @@
         </div>
     </section>
 
-    <section class="section section-light-bg">
+    <section class="section">
         <div class="container">
             <h2>Soluções para a Gestão de Riscos na Sua Empresa:</h2>
             <div class="service-list">
@@ -563,8 +686,7 @@
 
     <section class="section section-white">
         <div class="container">
-            <h2 style="color: var(--medium-blue);">A escolha de mais de 150 indústrias</h2>
-            <p style="text-align: center;">Nossa plataforma é a ferramenta de inteligência de dados que empresas de todos os portes e setores industriais utilizam para proteger seus ativos e garantir a segurança de cada transação.</p>
+            <h2 style="color: var(--dark-blue);">A escolha de mais de 150 indústrias</h2>
             <div class="logos-clients">
                 <img src="https://raw.githubusercontent.com/sacapinformacao/clientes/main/bunge%20logo.png" alt="logo Bunge">
                 <img src="https://raw.githubusercontent.com/sacapinformacao/clientes/main/gnatus%20logo.png" alt="Logo Gnatus">
@@ -577,7 +699,7 @@
 
     <section class="section section-white">
         <div class="container">
-            <h2 style="color: var(--medium-blue);">Garantindo a Conformidade e a Segurança na Cadeia Produtiva</h2>
+            <h2 style="color: var(--dark-blue);">Garantindo a Conformidade e a Segurança na Cadeia Produtiva</h2>
             <p style="text-align: center;">Vá além da análise de crédito tradicional. Nossas soluções de inteligência de dados são desenhadas para atender às rigorosas exigências de compliance da indústria, protegendo seu negócio e sua reputação.</p>
             <div class="service-list">
                 <div class="service-item">
@@ -626,14 +748,14 @@
         <div class="footer-column">
             <h3>Serviços</h3>
             <ul>
-                <li><a href="https://sacapinformacao.github.io/BackGroundCheck/">Background Check</a></li>
-                <li><a href="https://sacapinformacao.github.io/Veiculos/">Análise de Veículos</a></li>
-                <li><a href="https://sacapinformacao.github.io/Enriquecimento/">Enriquecimento de Dados</a></li>
-                <li><a href="https://sacapinformacao.github.io/Compliance/">Compliance e LGPD</a></li>
                 <li><a href="https://sacapinformacao.github.io/Cadastral/">Validação Cadastral</a></li>
+                <li><a href="https://sacapinformacao.github.io/Enriquecimento/">Enriquecimento de Dados</a></li>
                 <li><a href="https://sacapinformacao.github.io/Credito/">Análise de Crédito</a></li>
+                <li><a href="https://sacapinformacao.github.io/BackGroundCheck/">Background Check</a></li>
                 <li><a href="https://sacapinformacao.github.io/checagem-pre-processual/">Checagem Pré-processual</a></li>
                 <li><a href="https://sacapinformacao.github.io/devedores-e-reus/">Localização de Devedores e Réus</a></li>
+                <li><a href="https://sacapinformacao.github.io/Veiculos/">Análise de Veículos</a></li>
+                <li><a href="https://sacapinformacao.github.io/Compliance/">Compliance e LGPD</a></li>
             </ul>
         </div>
         <div class="footer-column">
@@ -670,5 +792,37 @@
     </div>
   </footer>
 
+  <script>
+    function sendDemoRequest(event) {
+        event.preventDefault(); // Previne o envio padrão do formulário
+
+        const form = event.target;
+        const nome = form.querySelector('[name="nome"]').value;
+        const email = form.querySelector('[name="email"]').value;
+        const whatsapp = form.querySelector('[name="whatsapp"]').value;
+        const cnpj = form.querySelector('[name="cnpj"]').value;
+
+        // Constrói o corpo do e-mail
+        const subject = "Solicitação de Demonstração - Página Indústria";
+        let body = "Nova solicitação de demonstração da Landing Page Indústria:\n\n";
+        body += `Nome Completo: ${nome}\n`;
+        body += `Email Corporativo: ${email}\n`;
+        body += `Número de WhatsApp: ${whatsapp}\n`;
+        body += `Número do CNPJ: ${cnpj}\n\n`;
+        body += "Origem: Landing Page Indústrias";
+        
+        // Cria o link mailto: com os dados codificados
+        const mailtoLink = `mailto:contato@apinformacao.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        // Redireciona para o cliente de e-mail
+        window.location.href = mailtoLink;
+        
+        // Exibe um alerta e reseta o formulário após o disparo do mailto (necessário por ser client-side)
+        setTimeout(() => {
+             alert('Seu pedido de demonstração foi preparado no seu aplicativo de e-mail. Por favor, confirme o envio para a APinformação.');
+             form.reset(); 
+        }, 500);
+    }
+</script>
 </body>
 </html>
