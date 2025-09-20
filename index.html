@@ -196,7 +196,7 @@
         align-items: center;
     }
 
-    @media (max-width: 992px) { /* Ponto de quebra ajustado para 992px */
+    @media (max-width: 1200px) { /* PONTO DE QUEBRA MAX: COBRE CELULARES E TABLETS */
         header {
             height: 60px;
             padding: 0 12px;
@@ -316,22 +316,26 @@
             margin-bottom: 0;
         }
         
-        /* Ajuste do novo Hero para mobile (CORRIGIDO) */
+        /* FIX DEFINITIVO DO HERO */
         .hero .container {
             flex-direction: column; /* FORÇA O EMPILHAMENTO VERTICAL */
+            align-items: center; /* Centraliza o formulário e o texto na largura da tela */
         }
         .hero-left {
             padding-right: 0;
             order: 1; /* O texto aparece primeiro (no topo) */
+            flex: 0 0 auto; /* ANULA A PROPORÇÃO DESKTOP */
+            width: 100%; /* Garante 100% de largura */
         }
         .hero-right {
             width: 100%;
             order: 2; /* O formulário aparece em segundo (abaixo) */
-            max-width: none;
+            flex: 0 0 auto; /* ANULA A PROPORÇÃO DESKTOP */
+            max-width: 400px; /* Mantém a largura máxima do formulário centralizada */
         }
     }
     
-    /* Novo Estilo da Seção HERO (Side-by-side) */
+    /* Novo Estilo da Seção HERO (Side-by-side no Desktop) */
     .hero {
         background: #fff;
         padding: 40px 20px;
@@ -372,7 +376,7 @@
         padding: 30px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        max-width: 400px;
+        max-width: 400px; /* Limite de largura no desktop */
     }
 
     .hero-right h2 {
