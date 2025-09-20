@@ -179,7 +179,7 @@
         color: white;
     }
     
-    /* CSS para Mobile Menu (Mantidos) */
+    /* CSS para Mobile Menu */
     #menu-toggle {
         display: none; 
     }
@@ -316,22 +316,22 @@
             margin-bottom: 0;
         }
         
-        /* FIX DEFINITIVO DO HERO */
+        /* CORREÇÃO DEFINITIVA DO HERO SECTION (Para telas <= 1200px) */
         .hero .container {
             flex-direction: column; /* FORÇA O EMPILHAMENTO VERTICAL */
-            align-items: center; /* Centraliza o formulário e o texto na largura da tela */
+            align-items: center; /* Centraliza o texto e o formulário */
+            gap: 30px;
+            padding: 0 20px; /* Garante o espaçamento lateral */
         }
         .hero-left {
-            padding-right: 0;
-            order: 1; /* O texto aparece primeiro (no topo) */
-            flex: 0 0 auto; /* ANULA A PROPORÇÃO DESKTOP */
-            width: 100%; /* Garante 100% de largura */
+            padding-right: 0; /* Remove padding que empurrava o texto */
+            order: 1; 
+            width: 100%;
+            text-align: center; /* Centraliza o texto */
         }
         .hero-right {
-            width: 100%;
-            order: 2; /* O formulário aparece em segundo (abaixo) */
-            flex: 0 0 auto; /* ANULA A PROPORÇÃO DESKTOP */
-            max-width: 400px; /* Mantém a largura máxima do formulário centralizada */
+            order: 2; 
+            width: 100%; /* Permite o uso do max-width: 400px e centralização */
         }
     }
     
@@ -377,6 +377,7 @@
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         max-width: 400px; /* Limite de largura no desktop */
+        margin: 0 auto; /* ADICIONADO: Garante a centralização robusta no mobile */
     }
 
     .hero-right h2 {
@@ -478,7 +479,7 @@
         filter: grayscale(0%); 
     }
 
-    /* ... Rodapé (Garantido e Mantido) ... */
+    /* Rodapé */
     footer {
         background-color: var(--dark-blue);
         color: white;
@@ -623,7 +624,7 @@
         <div class="container">
             <div class="hero-left">
                 <h1>Inteligência de Dados para a Indústria: Mitigue Riscos e Impulsione seu Negócio</h1>
-                <p>Mais de 150 indústrias <strong>confiam em nossos serviços</strong>. Nossa plataforma oferece uma solução completa de análise de risco, diligência e conformidade, protegendo a sua cadeia de negócios do fornecedor ao cliente final.</p>
+                <p>Mais de 150 indústrias **confiam em nossos serviços**. Nossa plataforma oferece uma solução completa de análise de risco, diligência e conformidade, protegendo a sua cadeia de negócios do fornecedor ao cliente final.</p>
                 <p>Nossa plataforma é a ferramenta de inteligência de dados que empresas de todos os portes e setores industriais utilizam para proteger seus ativos e garantir a segurança de cada transação.</p>
             </div>
 
