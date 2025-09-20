@@ -179,7 +179,7 @@
         color: white;
     }
     
-    /* CSS para Mobile Menu (Mantido) */
+    /* CSS para Mobile Menu (Mantidos) */
     #menu-toggle {
         display: none; 
     }
@@ -196,7 +196,7 @@
         align-items: center;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 992px) { /* Ponto de quebra ajustado para 992px */
         header {
             height: 60px;
             padding: 0 12px;
@@ -318,7 +318,7 @@
         
         /* Ajuste do novo Hero para mobile (CORRIGIDO) */
         .hero .container {
-            flex-direction: column;
+            flex-direction: column; /* FORÇA O EMPILHAMENTO VERTICAL */
         }
         .hero-left {
             padding-right: 0;
@@ -331,7 +331,7 @@
         }
     }
     
-    /* Novo Estilo da Seção HERO */
+    /* Novo Estilo da Seção HERO (Side-by-side) */
     .hero {
         background: #fff;
         padding: 40px 20px;
@@ -474,7 +474,7 @@
         filter: grayscale(0%); 
     }
 
-    /* ... Rodapé (Mantido) ... */
+    /* ... Rodapé (Garantido e Mantido) ... */
     footer {
         background-color: var(--dark-blue);
         color: white;
@@ -619,7 +619,7 @@
         <div class="container">
             <div class="hero-left">
                 <h1>Inteligência de Dados para a Indústria: Mitigue Riscos e Impulsione seu Negócio</h1>
-                <p>Mais de 150 indústrias **confiam em nossos serviços**. Nossa plataforma oferece uma solução completa de análise de risco, diligência e conformidade, protegendo a sua cadeia de negócios do fornecedor ao cliente final.</p>
+                <p>Mais de 150 indústrias <strong>confiam em nossos serviços</strong>. Nossa plataforma oferece uma solução completa de análise de risco, diligência e conformidade, protegendo a sua cadeia de negócios do fornecedor ao cliente final.</p>
                 <p>Nossa plataforma é a ferramenta de inteligência de dados que empresas de todos os portes e setores industriais utilizam para proteger seus ativos e garantir a segurança de cada transação.</p>
             </div>
 
