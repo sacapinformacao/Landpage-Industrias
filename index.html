@@ -316,17 +316,17 @@
             margin-bottom: 0;
         }
         
-        /* Ajuste do novo Hero para mobile */
+        /* Ajuste do novo Hero para mobile (CORRIGIDO) */
         .hero .container {
             flex-direction: column;
         }
         .hero-left {
             padding-right: 0;
-            order: 2; /* Coloca o conteúdo abaixo do formulário no mobile */
+            order: 1; /* O texto aparece primeiro (no topo) */
         }
         .hero-right {
             width: 100%;
-            order: 1; /* Coloca o formulário no topo no mobile */
+            order: 2; /* O formulário aparece em segundo (abaixo) */
             max-width: none;
         }
     }
@@ -619,7 +619,7 @@
         <div class="container">
             <div class="hero-left">
                 <h1>Inteligência de Dados para a Indústria: Mitigue Riscos e Impulsione seu Negócio</h1>
-                <p>Mais de <strong>150 indústrias confiam em nossos serviços</strong>. Nossa plataforma oferece uma solução completa de análise de risco, diligência e conformidade, protegendo a sua cadeia de negócios do fornecedor ao cliente final.</p>
+                <p>Mais de 150 indústrias **confiam em nossos serviços**. Nossa plataforma oferece uma solução completa de análise de risco, diligência e conformidade, protegendo a sua cadeia de negócios do fornecedor ao cliente final.</p>
                 <p>Nossa plataforma é a ferramenta de inteligência de dados que empresas de todos os portes e setores industriais utilizam para proteger seus ativos e garantir a segurança de cada transação.</p>
             </div>
 
